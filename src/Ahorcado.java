@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ahorcado {
@@ -21,23 +20,33 @@ public class Ahorcado {
     }
 
     void ficheroPalabras() {
-        System.out.println("Este es el menu de gestion de las palabras del juego, elija una de las opciones siguientes: ");
-        System.out.println("\n1) Añadir palabra\n2) Listar palabras\n3) Buscar palabra\n4) Eliminar palabra\n5) Salir");
-        opt_fichero = numeros.nextInt();
+        do {
+            System.out.println("Este es el menu de gestion de las palabras del juego, elija una de las opciones siguientes: ");
+            System.out.println("\n1) Añadir palabra\n2) Listar palabras\n3) Buscar palabra\n4) Eliminar palabra\n5) Salir");
+            opt_fichero = numeros.nextInt();
 
-        switch (opt_fichero) {
-            case 1:
-                añadirPalabra();
-                break;
-            case 2:
-                listarPalabras();
-                break;
-        }
+            switch (opt_fichero) {
+                case 1:
+                    addPalabra();
+                    break;
+                case 2:
+                    listarPalabras();
+                    break;
+                case 3:
+                    buscarPalabra();
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    System.out.println("Saliendo del menu...");
+            }
+        } while (opt_fichero != 5);
+
     }
 
-    void añadirPalabra() {
-        String finalizar = "";
-        String entrada = "";
+    void addPalabra() {
+        String finalizar;
+        String entrada;
         int cont = 0;
         for (String palabra : palabras) {
             if (palabra != null) {
@@ -49,7 +58,7 @@ public class Ahorcado {
         } else {
             System.out.println("Bienvenido a la interfaz para añadir palabras");
             for (int i = 0; i < palabras.length; i++) {
-                System.out.println("\nPor favor añada una palabra "+"("+(palabras.length - cont)+" palabras " +
+                System.out.println("\nPor favor añada una palabra " + "(" + (palabras.length - cont) + " palabras " +
                         "restantes)");
                 entrada = lineas.nextLine().toUpperCase();
 
@@ -67,7 +76,7 @@ public class Ahorcado {
                     }
                 }
 
-                if ((palabras.length - cont) == 0){
+                if ((palabras.length - cont) == 0) {
                     System.out.println("Ha llegado al limite de palabras admitidas");
                 } else {
                     System.out.println("Desea añadir alguna palabra más? (Max 5)");
@@ -91,8 +100,20 @@ public class Ahorcado {
 
     void listarPalabras() {
         System.out.println("Las palabras guardadas actualmente son: ");
+        for (String palabra : palabras) {
+            System.out.println(palabra);
+        }
+    }
+
+    void buscarPalabra() {
+        System.out.println("Bienvenido a la interfaz de búsqueda de palabras guardadas.");
+        System.out.println("Por favor introduzca la palabra a buscar");
+        String busca = lineas.nextLine().toUpperCase();
         for (int i = 0; i < palabras.length; i++) {
-                    System.out.println(palabras[i]);
+            if (palabras[i].equals(busca)) {
+                System.out.println(i +" "+ palabras[i]);
+                i = palabras.length;
+            }
         }
     }
 
@@ -100,10 +121,13 @@ public class Ahorcado {
 
         Ahorcado m = new Ahorcado();
 
-        m.menu();
-        if (opt_menu == 1) {
-            m.ficheroPalabras();
-        }
+        do {
+            m.menu();
+            if (opt_menu == 1) {
+                m.ficheroPalabras();
+            }
+        } while (opt_menu != 3);
+
 
     }
 }
