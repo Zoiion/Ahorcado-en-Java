@@ -4,7 +4,7 @@
     <option name="idleTime" value="409" />
     <option name="totalRunTime" value="1686076" />
     <option name="totalDebugTime" value="682292" />
-    <option name="todayTime" value="5248" />
+    <option name="todayTime" value="5329" />
     <option name="todayDateTime" value="1765234800000" />
     <option name="classTimeData">
       <map>
@@ -19,8 +19,8 @@
         <entry key="2025-12-09 16">
           <value>
             <map>
-              <entry key=".gitignore" value="118" />
-              <entry key="Ahorcado.java" value="2408" />
+              <entry key=".gitignore" value="169" />
+              <entry key="Ahorcado.java" value="2438" />
               <entry key="String.java" value="2" />
             </map>
           </value>

@@ -4,6 +4,7 @@ out/
 !**/src/test/**/out/
 *.iml
 .idea
+.idea/ultramega-time-tracker.xml
 
 ### Eclipse ###
 .apt_generated
