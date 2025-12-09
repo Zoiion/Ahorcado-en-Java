@@ -139,6 +139,8 @@ public class Ahorcado {
             }
         } while (opt_menu != 3);
 
+        System.out.println("Gracias por jugar al ahorcado😊");
+
 
     }
 }
