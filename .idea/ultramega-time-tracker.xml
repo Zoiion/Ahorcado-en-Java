@@ -2,9 +2,9 @@
 <project version="4">
   <component name="UltramegaTimeTracker">
     <option name="idleTime" value="409" />
-    <option name="totalRunTime" value="1639910" />
+    <option name="totalRunTime" value="1686076" />
     <option name="totalDebugTime" value="682292" />
-    <option name="todayTime" value="4894" />
+    <option name="todayTime" value="5248" />
     <option name="todayDateTime" value="1765234800000" />
     <option name="classTimeData">
       <map>
@@ -20,7 +20,7 @@
           <value>
             <map>
               <entry key=".gitignore" value="118" />
-              <entry key="Ahorcado.java" value="2054" />
+              <entry key="Ahorcado.java" value="2408" />
               <entry key="String.java" value="2" />
             </map>
           </value>

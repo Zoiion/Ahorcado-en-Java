@@ -36,6 +36,7 @@ public class Ahorcado {
                     buscarPalabra();
                     break;
                 case 4:
+                    eliminarPalabra();
                     break;
                 case 5:
                     System.out.println("Saliendo del menu...");
@@ -115,6 +116,16 @@ public class Ahorcado {
                 i = palabras.length;
             }
         }
+    }
+
+    void eliminarPalabra() {
+        System.out.println("Bienvenido a la interfaz para eliminar palabras.");
+        for (int i = 0; i < palabras.length; i++) {
+            System.out.println(i+" "+palabras[i]);
+        }
+        System.out.println("\nPor favor introduzca el numero de la palabra a eliminar de la lista");
+        int num = numeros.nextInt();
+        palabras[num] = null;
     }
 
     public static void main(String[] args) {
